@@ -1,0 +1,98 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #15202B;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.register-box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 50px;
+    text-align: left;
+    max-width: 400px;
+    width: 80%; /* Reducción del ancho para moverlo hacia la izquierda */
+    color: #333;
+    margin-top: 300px;
+    margin-left: -50%; /* Añade un margen izquierdo para moverlo hacia la izquierda */
+}
+
+/* Estilos para el encabezado del formulario */
+.register-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilos para etiquetas de formulario */
+.form-label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Estilos para campos de entrada de formulario */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Estilos para el botón de registro */
+.btn-register {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-register:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el enlace de inicio de sesión */
+.login-link {
+    margin-top: 10px;
+}
+
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+
+.logo-register {
+    text-align: right;
+    margin-right: 175px;
+    margin-bottom: -480px; /* Espacio inferior entre el logo y el formulario */
+}
+
+
+.logo-register img {
+    
+    width: 450px;
+    height: 450px;
+}

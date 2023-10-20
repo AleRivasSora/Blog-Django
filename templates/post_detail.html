@@ -1,0 +1,77 @@
+{% extends 'index.html' %}
+{% load static %}
+{% load humanize %}
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+    
+
+<link rel="stylesheet" type="text/css" href="{% static 'style_post_detail.css' %}">
+
+<div class="container">
+    <div class="post-container">
+        <div class="post-header">
+            <div class="user-info">
+                
+                {% if post.author.foto %}
+                <img src="{{ post.author.foto }}" alt="{{ post.author.username }}" class="user-avatar">
+                {% else %}
+                <img src="{% static 'img/empty.png' %}" alt="{{ post.author.username }}" class="user-avatar">
+                {% endif %}
+                    
+                
+                <div class="user-details">
+                    <p class="user-name">{{ post.author.username }}</p>
+                    <p class="post-date">{{ post.created_at|naturaltime }}</p>
+                </div>
+            </div>
+            <div class="post-options">
+                <!-- Agrega opciones como editar o eliminar aquí si es necesario -->
+            </div>
+        </div>
+        <div class="post-content">
+            <p>{{ post.content }}</p><br><br>
+            {% if post.image %}
+                <img src="{{ post.image.url }}" alt="Imagen del post">
+            {% else %}
+
+            {% endif %}
+        </div>
+        <div class="post-actions">
+            <!-- Agrega botones para "Me gusta", "Comentar" y "Compartir" aquí si es necesario -->
+        </div>
+    </div>
+</div>
+<div class="comments-section">
+    <h2>Comentarios</h2>
+    <!-- Formulario para agregar un comentario -->
+    <form method="post" action="{% url 'main:post_detail' post.id post.author %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <textarea name="comment" class="comment-input" placeholder="Escribe tu comentario aquí"></textarea>
+        <input type="file" name="image_post" class="comment-image-input">
+        <button type="submit" class="comment-submit-button">Comentar</button>
+    </form>
+
+    <!-- Lista de comentarios -->
+    <ul class="comment-list">
+        {% for comment in comments %}
+        <li class="comment">
+            <div class="comment-header">
+                <img src="{{ comment.author.foto.url }}" alt="{{ comment.author.username }} Avatar" class="comment-author-avatar">
+                <p class="comment-author-name">{{ comment.author.username }}</p>
+                <p class="comment-date">{{ comment.created_at|naturaltime }}</p>
+            </div>
+            <p class="comment-content">{{ comment.content }}</p>
+            {% if comment.image %}
+            <img src="{{ comment.image.url }}" alt="Imagen del comentario">
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endif %}
+{% endblock content %}
+    

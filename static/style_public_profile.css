@@ -1,0 +1,81 @@
+/* Estilos para el perfil público */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f8fa; /* Color de fondo similar al de Twitter */
+  }
+  
+  .profile-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Forma redonda para la imagen de perfil */
+  }
+  
+  .profile-username {
+    margin-left: 20px;
+    font-size: 24px;
+  }
+  
+  .profile-bio {
+    margin: 10px 0;
+  }
+  
+  .btn-follow, .btn-unfollow {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .btn-follow {
+    background-color: #1da1f2; /* Azul de Twitter */
+  }
+  
+  .btn-unfollow {
+    background-color: #e0245e; /* Rojo de Twitter */
+  }
+  
+  /* Estilos para la lista de posts */
+  .profile-heading {
+    font-size: 20px;
+    margin: 20px 0;
+  }
+  
+  .profile-post-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .profile-post-item {
+    border: 1px solid #e1e8ed;
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  .profile-post-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .profile-post-content {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .profile-post-date {
+    color: #657786; /* Color de texto gris similar al de Twitter */
+  }
+  

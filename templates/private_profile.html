@@ -1,0 +1,69 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'style_profile.css' %}">
+</head>
+
+{% if user.is_authenticated %}
+    
+{% csrf_token %}
+    
+
+<div class="container">
+    <!-- Cabecera de perfil -->
+    <div class="profile-header">
+        
+        {% if user.foto %}
+        <img src="{{ user.foto }}" alt="Avatar" class="profile-avatar">
+        {% else %}
+        <img src="{% static 'img/empty.png' %}" alt="Avatar" class="profile-avatar">
+        {% endif %}
+            
+        
+        <div class="profile-info">
+            <h1>{{ user.first_name }} {{ user.last_name }}</h1>
+            <p>@{{ user.username }}</p>
+        </div>
+            <!-- Contenido principal -->
+    <div class="profile-content">
+        <div class="user-actions">
+            <a href="#" class="btn">Editar Perfil</a>
+            
+        </div>
+        <div class="user-bio">
+            <p><br>
+                ¡Hola a todos! Soy un apasionado de la programación y la tecnología.</p>
+        </div>
+
+        <!-- Información de Seguidores y Seguidos -->
+        <div class="user-followers-info">
+            <p><strong>Seguidores</strong>
+            {{ followers }}
+                </p>
+        </div>
+        <div class="user-following-info">
+            <p><strong>Seguidos</strong> {{ followed }}</p>
+        </div>
+
+    
+</div>
+    </div>
+
+
+</div>
+<br>
+<!-- Últimos tweets -->
+<div class="tweets">
+    <div class="tweet">
+        <p>Este es un tweet de ejemplo. 😄 #Django #Python</p>
+        <small>Publicado el 01/01/2023</small>
+    </div>
+    <!-- Agrega más tweets según sea necesario -->
+</div>
+{% endif %}
+
+{% endblock content %}

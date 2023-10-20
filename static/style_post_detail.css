@@ -1,0 +1,180 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #192734; /* Mismo color de fondo que en inicio.html */
+    color: #fff; /* Color de texto principal */
+}
+
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #15202B; /* Mismo color de fondo que en inicio.html */
+    color: #fff; /* Color de texto principal */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Resto de los estilos permanecen sin cambios */
+
+/* Estilos para el post */
+.post-container {
+    border: 1px solid #000000; /* Borde alrededor del post */
+    border-radius: 8px;
+    margin: 15px 0;
+    padding: 10px;
+    background-color:#192734; /* Fondo del post */
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Hace que la foto de perfil sea redonda */
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.user-details {
+    font-weight: bold;
+    color: #333;
+}
+
+.post-date {
+    font-size: 14px;
+    color: #777;
+}
+
+.post-content {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.post-content img {
+    max-width: 100%; /* Ajusta el tamaño máximo de las imágenes */
+    height: auto;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e1e8ed; /* Línea divisoria en la parte inferior del post */
+    padding: 10px 0;
+}
+
+/* Estilos para botones de acción (puedes personalizarlos) */
+.action-button {
+    background-color: #1da1f2; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Cambia el color de fondo cuando se pasa el mouse sobre el botón */
+.action-button:hover {
+    background-color: #0f81db;
+}
+
+/* Puedes agregar estilos para otros botones de acción según tus necesidades */
+
+/* Estilos específicos para el botón "Me gusta" */
+.like-button {
+    background-color: #e83e8c;
+    color: #fff;
+}
+
+/* Cambia el color de fondo cuando se pasa el mouse sobre el botón "Me gusta" */
+.like-button:hover {
+    background-color: #d6327a;
+}
+
+/* Estilos para la sección de comentarios */
+.comments-section {
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.comment-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.comment-image-input {
+    display: block;
+    margin: 10px 0;
+}
+
+.comment-submit-button {
+    background-color: #1da1f2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.comment-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.comment {
+    background-color: #f5f8fa;
+    border: 1px solid #e1e8ed;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comment-author-name {
+    font-weight: 600;
+}
+
+.comment-date {
+    color: #707e88;
+    margin-left: 10px;
+}
+
+.comment-content {
+    margin-bottom: 10px;
+}
+
+/* Estilos para las imágenes de los comentarios */
+img {
+    max-width: 100%;
+    height: auto;
+}

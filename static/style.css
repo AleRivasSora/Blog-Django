@@ -1,0 +1,500 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuración global de la fuente y colores */
+body {
+    font-family: Arial, sans-serif;
+    background-color:#192734; /* Fondo principal */
+    color: #fff; /* Color de texto principal */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Evita que la barra de desplazamiento aparezca */
+}
+
+
+/* Estilos para la barra de navegación lateral */
+.sidebar {
+    position: fixed; /* Posición fija para que se mantenga en su lugar al desplazar */
+    left: 0; /* Alineación a la izquierda */
+    top: 0; /* Comienza desde la parte superior */
+    height: 100%; /* Ocupa toda la altura de la pantalla */
+    width: 280px; /* Ancho fijo de la barra lateral */
+    background-color: #15202B; /* Fondo de la barra lateral */
+    padding: 16px;
+}
+
+/* Estilos para el logo */
+.logo img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Estilos para los enlaces de navegación */
+.nav-links a {
+    text-align: center;
+    text-decoration: none;
+    color: #1DA1F2; /* Color de los enlaces */
+    font-weight: bold;
+    display: block; /* Cada enlace en un bloque separado */
+    margin-bottom: 20px; /* Espacio inferior entre enlaces */
+}
+
+.login-link {
+    position: absolute;
+    bottom: 0; /* Coloca el enlace en la parte inferior */
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 50px;
+    margin-left: 0px;
+    display: block;
+}
+
+.login-link a {
+    font-weight:bold;
+    color: #57a8ff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+.nav-logout a{
+    position: absolute;
+    bottom: 0; /* Coloca el enlace en la parte inferior */
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: -50px;
+    margin-left: -50px;
+}
+/* Estilos para las imágenes de iconos en la clase .nav-links */
+.nav-links img {
+    width: 10px; /* Ancho personalizado */
+    height: auto; /* Alto personalizado */
+}
+
+
+/* Estilos para la barra de búsqueda */
+/* Estilos para la barra de búsqueda */
+.search-bar input {
+    padding: 8px;
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    width: 100%; /* Ancho completo */
+    background-color: #192734; /* Fondo del campo de búsqueda */
+    color: #fff; /* Color del texto en el campo de búsqueda */
+    margin-top: 20px; /* Espacio superior */
+
+
+    /* Ajusta el ancho según tus preferencias */
+    width: 150px; /* Ancho personalizado */
+    border-bottom: 1px solid #000;
+}
+
+/* Ajusta el alto según tus preferencias */
+.search-bar input {
+    height: 40px; /* Alto personalizado */
+    text-align: center;
+}
+
+.search-bar input::placeholder {
+    /* Alinea verticalmente el texto del placeholder en el centro */
+    vertical-align: middle;
+    
+}
+
+/* Estilos para la barra de navegación lateral */
+.sidebar {
+    position: fixed; /* Posición fija para que se mantenga en su lugar al desplazar */
+    left: 0; /* Alineación a la izquierda */
+    top: 0; /* Comienza desde la parte  superior */
+    height: 100%; /* Ocupa toda la altura de la pantalla */
+    width: 150px; /* Ancho fijo de la barra lateral */
+    background-color: #15202B; /* Fondo de la barra lateral */
+    padding: 16px;
+    border-right: 1px solid #000; /* Línea separadora negra a la derecha */
+}
+
+/* Resto de los estilos (como el logo, los enlaces y la barra de búsqueda) permanecen sin cambios */
+
+/* Estilos para el contenido principal */
+main {
+    margin-left: 280px; /* Deja espacio a la izquierda para la barra lateral */
+    padding: 16px;
+}
+
+/* Estilos para el logo */
+.logo {
+    text-align: left; /* Alinea el contenido a la izquierda (opcional) */
+    margin-left: -25px; /* Ajusta el margen izquierdo según tus preferencias */
+}
+.logo img {
+    width: 160px; /* Ancho personalizado, ajusta este valor según tu preferencia */
+    height: auto; /* Altura automática para mantener la proporción original */
+
+}
+
+/* Estilos para el encabezado del formulario */
+/* Estilos para el contenedor principal */
+.logo-login {
+    text-align: left;
+    margin-left: -100px;
+    margin-bottom: 20px; /* Espacio inferior entre el logo y el formulario */
+}
+
+
+.logo-login img {
+    
+    width: 450px;
+    height: 450px;
+}
+
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #15202B;
+}
+
+/* Estilos para el contenedor del formulario */
+.login-box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Estilos para el encabezado del formulario */
+.login-heading {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilos para etiquetas de formulario */
+.form-label {
+    font-weight: bold;
+    color: #666;
+}
+
+/* Estilos para campos de entrada de formulario */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilos para el botón de inicio de sesión */
+.btn-login {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Estilos para el enlace de registro */
+.signup-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para mensajes de error */
+.messages .error {
+    background-color: #ffffff; /* Cambia el color de fondo */
+    color: #000000; /* Cambia el color del texto */
+    border: 1px solid #85423f; /* Cambia el borde */
+}
+
+/* Estilo para mensajes de éxito */
+.messages .success {
+    background-color: #5cb85c;
+    color: #fff;
+    border: 1px solid #4cae4c;
+}
+
+/* Estilo para mensajes de advertencia */
+.messages .warning {
+    font-weight:bold;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #ffffff;
+    
+}
+
+/* Estilo para mensajes informativos */
+.messages .info {
+    background-color: #5bc0de;
+    color: #fff;
+    border: 1px solid #46b8da;
+}
+
+main {
+    margin-left: 150px; /* Compensa el ancho de la barra lateral para mover el contenido a la izquierda */
+}
+/* Estilos comunes para contenedores */
+.container {
+    margin-left: 80px;
+    width: 85%;
+    background-color: #15202B;
+    color: #fff;
+    padding: 20px;
+    border-color: #000000;
+    border-radius: 8px;
+    
+}
+
+/* Este estilo oculta el elemento de entrada de archivo */
+input[type="file"] {
+    display: none;
+  }
+  
+  /* Estilo para el botón personalizado */
+  .post-input-image-label {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 14px 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    
+    
+  }
+  
+.post-content {
+    margin-left: 60px;
+}
+  /* Estilo para el contenedor del botón personalizado */
+  .post-input-image-container {
+    display: inline-block;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  /* Cambia el color del texto en el botón personalizado al pasar el cursor sobre él */
+  .post-input-image-label:hover {
+    background-color: #0056b3;
+  }
+  
+/* Estilos para el formulario de nuevos posts */
+.post-form {
+    
+    margin-left: 100px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border: 1px solid #000;
+    width: 80%;
+}
+.author-name {
+    color:#007bff;
+    font-weight: bold;
+    font-size: large;
+}
+.post-date {
+    color: #757575;
+}
+.post-input {
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #192734;
+    resize: none;
+    height: 120px;
+}
+
+.btn-submit {
+    background-color: #1DA1F2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+}
+
+.btn-submit:hover {
+    background-color: #0F7AE5;
+}
+
+.container-pro {
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #15202B; /* Mismo color de fondo que en inicio.html */
+    color: #fff; /* Color de texto principal */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Estilos para los posts */
+.post-item {
+    margin-left: 1%;
+    background-color: #192734;
+    border: 1px solid #000;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative;
+    width: 98%;
+    padding: 1px;
+}
+
+.post-details {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 60px;
+}
+
+.post-author-info {
+    margin-left: 10px;
+    
+}
+.author-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit:cover ;
+    border: 1px #000000;
+
+}
+
+.author-info {
+    color: #fff;
+}
+
+.comment-form {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.comment-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #192734;
+    resize: vertical;
+}
+
+.comment-btn {
+    background-color: #1DA1F2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+
+.comment-btn:hover {
+    background-color: #0F7AE5;
+}
+
+.comment-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comment-item {
+    background-color: #192734;
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.comment-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comment-info {
+    color: #fff;
+}
+
+    /* Aplica un desplazamiento vertical a toda la página */
+body {
+    overflow-y: scroll;
+}
+
+.profile-avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit:cover ;
+    border: 1px #000000;
+}
+
+.post-author-info {
+    display: flex; /* Usa un contenedor flexible para alinear verticalmente los elementos */
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+}
+
+.author-avatar {
+    margin-right: 10px; /* Agrega espacio entre la foto del autor y los detalles */
+    border-radius: 50%; /* Esto hace que la imagen sea circular (si tus imágenes son cuadradas) */
+    overflow: hidden; /* Oculta cualquier parte que no encaje en el círculo */
+    width: 50px; /* Ajusta el ancho según tus preferencias */
+    height: 50px; /* Ajusta la altura según tus preferencias */
+}
+
+.author-avatar img {
+    width: 100%; /* Ajusta la imagen para que ocupe todo el espacio del contenedor */
+    height: auto; /* Mantén la relación de aspecto original de la imagen */
+}
+
+/* Anula el estilo predeterminado de los enlaces */
+a {
+    text-decoration: none; /* Quita la subrayado de los enlaces */
+    color: inherit; /* Usa el color heredado para el texto del enlace */
+}
+
+/* Estilo para enlaces cuando se les hace hover (opcional) */
+a:hover {
+    text-decoration: none; /* Quita la subrayado en hover */
+    /* Puedes aplicar estilos adicionales en hover si lo deseas */
+}

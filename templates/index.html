@@ -1,0 +1,66 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title></title>
+
+</head>
+<body>
+        
+    <div class="search-bar">
+        <center><input type="text" placeholder="Buscar en Blu"></center>
+    </div>
+    
+    <!-- Barra de navegación lateral -->
+    
+    
+        
+    <nav class="sidebar">
+        
+    
+        <div class="logo">
+            <img src="{% static 'img/logo_transparent.png' %}" alt="Blu Logo">
+        </div>
+        <div class="nav-links">
+            <a href="{% url 'main:inicio' %}">Inicio</a>
+            <a href="{% url 'main:private_profile' %}">Perfil</a>
+            <a href="#">Explorar</a>
+            <a href="#">Notificaciones</a>
+            <a href="#">Mensajes</a>            
+        </div>
+        <div class="login-link" ><center><a href="#">
+            {% if user.is_authenticated %}
+            {% csrf_token %}
+            
+            {% if iser.foto %}
+            <img src="{{ user.foto }}" alt="Avatar" class="profile-avatar"><br>
+            {% endif %}
+            Hola {{ user.username }}
+            <br>
+            <a href="{% url 'main:salir' %}">Cerrar sesion</a>
+            {% else %}
+            <a href="{% url 'main:login' %}">Ingresar</a>
+            <br>
+            <a href="{% url 'main:register' %}">Registrarse</a>
+            No autenticado
+            {% endif %}
+        </a></center></div>
+
+    </nav>
+<main >
+
+{% block content %}
+    
+{% endblock content %}
+</main>
+</body>
+
+</html>
+
+
+    

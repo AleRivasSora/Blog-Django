@@ -1,0 +1,100 @@
+/* Estilos para la Cabecera de perfil */
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color:#1DA1F2; /* Azul más brillante */
+    color: #fff;
+    text-align: left;
+    border-color: #fff;
+    border: 1px solid #000000; /* Agrega bordes blancos */
+    border-radius: 10px;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #000000;
+    margin-right: 20px;
+}
+
+.profile-info {
+    text-align: left;
+}
+
+/* Estilos para el Contenido principal */
+.profile-content {
+    padding: 20px;
+    background-color:#1f2021; /* Gris claro */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);   
+    margin-top: 10px;
+    text-align: left;
+    margin-left: 50px;
+}
+
+.user-bio {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Estilos para Últimos tweets */
+.tweets {
+    font-size: 16px;
+    color: #333;
+}
+
+.tweet {
+    border: 1px solid #15202B;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #15202B;
+    border-color: #000000;
+    border: 1px solid#000000;
+}
+
+.tweet p {
+    margin: 0;
+    color: #fff;
+}
+
+.tweet small {
+    
+    color: #768899;
+}
+
+/* Estilos para botones */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0074B6;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-top: -5px;
+    
+}
+
+.btn:hover {
+    background-color: #1DA1F2;
+}
+
+/* Estilos para la información de Seguidores y Seguidos */
+.user-followers-info, .user-following-info {
+    font-size: 18px;
+    color:#0074B6;
+    margin-bottom: 10px;
+}
+
+.user-followers-info strong, .user-following-info strong {
+    font-weight: bold;
+    color: #ffffff; /* Azul más brillante */
+}

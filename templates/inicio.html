@@ -1,0 +1,77 @@
+{% extends 'index.html' %}
+{% load static %}
+{% load humanize %}
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<div class="container">
+    <center><h1 class="welcome-heading">Bienvenido a la Página de Inicio</h1></center>
+
+    <!-- Formulario para hacer nuevos posts -->
+    <div class="post-form">
+        <h2 class="form-heading">Haz un nuevo post</h2>
+        <form method="post" action="{% url 'main:inicio' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            {% if user.foto %}
+            <img src="{{ user.foto }}" alt="@{{ user.username }}" class="profile-avatar"><br>
+            {% else %}
+                
+            <img src="{% static 'img/empty.png' %}" alt="@{{ user.username }}" class="profile-avatar"><br>
+            <textarea  class="post-input" placeholder="¿Qué estás pensando {{ user.first_name }} ?" name="content" id="content"></textarea><br>
+            {% endif %}
+            
+                <label for="image" class="post-input-image-label">Subir Imagen</label>
+                <input type="file" name="image" id="image" class="post-input-image">
+                <button type="submit" class="btn-submit">Publicar</button>
+
+        </form>
+    </div>
+    <br>
+</div>
+<br>
+    <!-- Lista de posts existentes -->
+    <div class="container-pro">
+    
+        <h2 class="list-heading"><center>Posts recientes:</center></h2><br>
+            {% for post in posts %}
+            <div class="post-list">
+                <li class="post-item">
+                    <a  href="{% url 'main:post_detail' post.id post.author %}">
+                    <div class="post-author-info">
+                    {% if post.author.foto %}
+                    <img src="{{ post.author.foto }}" alt="{{ post.author.username }} Avatar" class="author-avatar">
+                    {% else %}
+                    <img src="{% static 'img/empty.png' %}" alt="{{ post.author.username }} Avatar" class="author-avatar">
+                    {% endif %}
+                        
+                    <div class="author-info">
+                        <p class="author-name"><a href="public_profile">{{ post.author.username }}</a></p><small><p class="post-date">{{ post.created_at|naturaltime }}</p><br></small>  
+                        
+                    </div>
+                    
+                </div>
+                <div class="post-content">{{ post.content }} </div><br><br>
+                <div class="post-details">
+                    
+                        {% if post.image  %}
+                        <img src="{{ post.image.url }}" alt="" >
+                        {% else %}
+
+                        {% endif %}
+                        
+                        </div>
+                    </a>
+                </li>
+            </li>
+        </div>
+            {% endfor %}
+        
+    </div>
+</div>
+
+{% endif %}
+
+{% endblock  %}
